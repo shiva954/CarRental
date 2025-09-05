@@ -1,0 +1,283 @@
+@use "sass:color";
+.signin-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .signin-wrapper {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+
+    .signin-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+
+      .back-btn {
+        background: none;
+        border: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .logo {
+        h2 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .signin-form-container {
+      padding: 40px 30px 30px;
+
+      .form-header {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h1 {
+          color: #333;
+          margin: 0 0 8px;
+          font-size: 28px;
+          font-weight: 700;
+        }
+
+        p {
+          color: #666;
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+
+      .signin-form {
+        .form-group {
+          margin-bottom: 20px;
+
+          label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+          }
+
+          input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+
+            &:focus {
+              outline: none;
+              border-color: #667eea;
+              box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            }
+
+            &.error {
+              border-color: #e74c3c;
+            }
+
+            &::placeholder {
+              color: #999;
+            }
+          }
+
+          .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+          }
+        }
+
+        .form-options {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 25px;
+
+          .checkbox-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+
+            input[type="checkbox"] {
+              margin-right: 8px;
+            }
+          }
+
+          .forgot-password {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #764ba2;
+            }
+          }
+        }
+
+        .submit-error {
+          background: #ffeaea;
+          color: #e74c3c;
+          padding: 10px;
+          border-radius: 6px;
+          margin-bottom: 20px;
+          text-align: center;
+          font-size: 14px;
+        }
+
+        .signin-btn {
+          width: 100%;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          border: none;
+          padding: 14px;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+          }
+
+          &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .signin-footer {
+        text-align: center;
+        margin: 25px 0;
+
+        p {
+          color: #666;
+          margin: 0;
+          font-size: 14px;
+
+          .link-btn {
+            background: none;
+            border: none;
+            color: #667eea;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 14px;
+
+            &:hover {
+              color: #764ba2;
+            }
+          }
+        }
+      }
+
+      .social-login {
+        .divider {
+          position: relative;
+          text-align: center;
+          margin: 25px 0;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e0e0e0;
+          }
+
+          span {
+            background: white;
+            padding: 0 15px;
+            color: #666;
+            font-size: 14px;
+          }
+        }
+
+        .social-buttons {
+          display: flex;
+          gap: 10px;
+
+          .social-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 600;
+
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+
+            &:hover {
+              border-color: #ccc;
+              transform: translateY(-1px);
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            &.google-btn {
+              color: #4285F4;
+            }
+
+            &.facebook-btn {
+              color: #1877F2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

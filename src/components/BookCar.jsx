@@ -1,10 +1,22 @@
 import { useEffect, useState } from "react";
-import CarAudi from "../images/cars-big/audia1.jpg";
-import CarGolf from "../images/cars-big/golf6.jpg";
-import CarToyota from "../images/cars-big/toyotacamry.jpg";
-import CarBmw from "../images/cars-big/bmw320.jpg";
-import CarMercedes from "../images/cars-big/benz.jpg";
-import CarPassat from "../images/cars-big/passatcc.jpg";
+import CarImg4 from "../images/cars-big/Volkswagen.jpeg";
+import CarImg5 from "../images/cars-big/Honda.jpg";
+import CarImg6 from "../images/cars-big/Hyundai.jpg";
+import CarImg7 from "../images/cars-big/Jeep.jpeg";
+import CarImg8 from "../images/cars-big/Kia.jpeg";
+import CarImg9 from "../images/cars-big/Mahindra.jpeg";
+import CarImg10 from "../images/cars-big/maruthi.jpeg";
+import CarImg11 from "../images/cars-big/Mg.jpeg";
+import CarImg12 from "../images/cars-big/Nissan.jpg";
+import CarImg13 from "../images/cars-big/Renault.webp";
+import CarImg14 from "../images/cars-big/Skoda.jpeg";
+import CarImg16 from "../images/cars-big/Suzuki.jpg";
+import CarImg17 from "../images/cars-big/Tata.jpeg";
+import CarImg18 from "../images/cars-big/Toyota.jpg";
+import CarImg19 from "../images/cars-big/Audi.jpeg";
+import CarImg20 from "../images/cars-big/Bajaj.jpeg";
+import CarImg1 from "../images/cars-big/Bmw.jpeg";
+import CarImg2 from "../images/cars-big/Ford.jpg";
 
 function BookCar() {
   const [modal, setModal] = useState(false); //  class - active-modal
@@ -122,23 +134,65 @@ function BookCar() {
   // based on value name show car img
   let imgUrl;
   switch (carImg) {
-    case "Audi A1 S-Line":
-      imgUrl = CarAudi;
+    case "Maruti Swift":
+      imgUrl = CarImg10;
       break;
-    case "VW Golf 6":
-      imgUrl = CarGolf;
+    case "Hyundai Creta":
+      imgUrl = CarImg6;
       break;
-    case "Toyota Camry":
-      imgUrl = CarToyota;
+    case "Toyota Innova":
+      imgUrl = CarImg18;
       break;
-    case "BMW 320 ModernLine":
-      imgUrl = CarBmw;
+    case "Honda City":
+      imgUrl = CarImg5;
       break;
-    case "Mercedes-Benz GLK":
-      imgUrl = CarMercedes;
+    case "Mahindra XUV500":
+      imgUrl = CarImg9;
       break;
-    case "VW Passat CC":
-      imgUrl = CarPassat;
+    case "Volkswagen Polo":
+      imgUrl = CarImg4;
+      break;
+      case "Tata Nexon":
+      imgUrl = CarImg17;
+      break;
+    case "Kia Seltos":
+      imgUrl = CarImg8;
+      break;
+    case "Ford EcoSport":
+      imgUrl = CarImg2;
+      break;
+    case "Renault Duster":
+      imgUrl =  CarImg13;
+      break;
+    case "Nissan Magnite":
+      imgUrl = CarImg12;
+      break;
+    case "Skoda Kushaq":
+      imgUrl = CarImg14;
+      break;
+      case "MG Hector":
+      imgUrl = CarImg11;
+      break;
+    case "Jeep Compass":
+      imgUrl = CarImg7;
+      break;
+    case "Suzuki Vitara Brezza":
+      imgUrl = CarImg16;
+      break;
+    case "Mahindra Thar":
+      imgUrl = CarImg9;
+      break;
+    case "Hyundai Venue":
+      imgUrl = CarImg6;
+      break;
+    case "Bajaj Qute":
+      imgUrl =  CarImg20;
+      break;
+      case "BMW 3 Series":
+      imgUrl = CarImg1;
+      break;
+    case "Audi A4":
+      imgUrl = CarImg19;
       break;
     default:
       imgUrl = "";
@@ -180,7 +234,7 @@ function BookCar() {
                     Type <b>*</b>
                   </label>
                   <select value={carType} onChange={handleCar}>
-                    <option>Select your car type</option>
+                    {/* <option>Select your car type</option>
                     <option value="Audi A1 S-Line">Audi A1 S-Line</option>
                     <option value="VW Golf 6">VW Golf 6</option>
                     <option value="Toyota Camry">Toyota Camry</option>
@@ -188,7 +242,28 @@ function BookCar() {
                       BMW 320 ModernLine
                     </option>
                     <option value="Mercedes-Benz GLK">Mercedes-Benz GLK</option>
-                    <option value="VW Passat CC">VW Passat CC</option>
+                    <option value="VW Passat CC">VW Passat CC</option> */}
+                        <option>Select your car type</option>
+                    <option value="Maruti Swift">Maruti Swift</option>
+                    <option value="Hyundai Creta">Hyundai Creta</option>
+                    <option value="Toyota Innova">Toyota Innova</option>
+                    <option value="Honda City">Honda City </option>
+                    <option value="Mahindra XUV500">Mahindra XUV500</option>
+                    <option value="Volkswagen Polo">Volkswagen Polo</option>
+                    <option value="Tata Nexon">Tata Nexon</option>
+                    <option value="Kia Seltos">Kia Seltos</option>
+                    <option value="Ford EcoSport">Ford EcoSport</option>
+                    <option value="Renault Duster">Renault Duster</option>
+                    <option value="Nissan Magnite">Nissan Magnite</option>
+                    <option value="Skoda Kushaq">Skoda Kushaq</option>
+                    <option value="MG Hector">MG Hector</option>
+                    <option value="Jeep Compass">Jeep Compass</option>
+                    <option value="Suzuki Vitara Brezza">Suzuki Vitara Brezza</option>
+                    <option value="Mahindra Thar">Mahindra Thar</option>
+                    <option value="Hyundai Venue">Hyundai Venue</option>
+                    <option value="Bajaj Qute">Bajaj Qute</option>
+                    <option value="BMW 3 Series">BMW 3 Series</option>
+                    <option value="Audi A4">Audi A4</option>
                   </select>
                 </div>
 
@@ -199,11 +274,26 @@ function BookCar() {
                   </label>
                   <select value={pickUp} onChange={handlePick}>
                     <option>Select pick up location</option>
-                    <option>Delhi</option>
-                    <option>Kolkata</option>
-                    <option>Bengaluru</option>
-                    <option>Mumbai</option>
-                    <option>Goa</option>
+                    <option>Dilsukhnagar</option>
+                    <option>HITEC City</option>
+                    <option>Khairatabad</option>
+                    <option>Kukatpally</option>
+                    <option>LB Nagar</option>
+                    <option>KPHB Colony</option>
+                    <option>Lakdi-ka-pul</option>
+                    <option>MG Bus Station</option>
+                    <option>Miyapur</option>
+                    <option>Nampally</option>
+                    <option>Punjagutta</option>
+                    <option>R.T.C. X Roads</option>
+                    <option>S.R. Nagar</option>
+                    <option>Secunderabad</option>
+                    <option>Uppal</option>
+                    <option>Tarnaka</option>
+                    <option>Yusufguda</option>
+                    <option>Musheerabad</option>
+                    <option>Jubilee Hills Check Post</option>
+                    <option>Gandhi Bhavan</option>
                   </select>
                 </div>
 
@@ -214,11 +304,27 @@ function BookCar() {
                   </label>
                   <select value={dropOff} onChange={handleDrop}>
                     <option>Select drop off location</option>
-                    <option>Delhi</option>
-                    <option>Kolkata</option>
-                    <option>Bengaluru</option>
-                    <option>Mumbai</option>
-                    <option>Goa</option>
+                    <option>Dilsukhnagar</option>
+                    <option>HITEC City</option>
+                    <option>Khairatabad</option>
+                    <option>Kukatpally</option>
+                    <option>LB Nagar</option>
+                    <option>KPHB Colony</option>
+                    <option>Lakdi-ka-pul</option>
+                    <option>MG Bus Station</option>
+                    <option>Miyapur</option>
+                    <option>Nampally</option>
+                    <option>Punjagutta</option>
+                    <option>R.T.C. X Roads</option>
+                    <option>S.R. Nagar</option>
+                    <option>Secunderabad</option>
+                    <option>Uppal</option>
+                    <option>Tarnaka</option>
+                    <option>Yusufguda</option>
+                    <option>Musheerabad</option>
+                    <option>Jubilee Hills Check Post</option>
+                    <option>Gandhi Bhavan</option>
+
                   </select>
                 </div>
 
